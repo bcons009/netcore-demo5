@@ -1,0 +1,124 @@
+﻿@page
+@model RegisterModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Register";
+    ViewBag.PanelTitle = "Register";
+    ViewBag.PanelIcon = "fas fa-user-plus";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <form id="account" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <div class="form-row">
+                    <label asp-for="Input.FirstName" class="col-md-2 control-label pr-3 d-flex flex-row-reverse"></label>
+                    <div class="input-group col-md-10">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text alert-info"><i class="fas fa-user alert-info"></i></span>
+                        </div>
+                        <input asp-for="Input.FirstName" placeholder="eg. John" class="form-control" />
+                    </div>
+                    <div class="offset-2">
+                        <span asp-validation-for="Input.FirstName" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-row">
+                    <label asp-for="Input.LastName" class="col-md-2 control-label pr-3 d-flex flex-row-reverse"></label>
+                    <div class="input-group col-md-10">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text alert-info"><i class="fas fa-user alert-info"></i></span>
+                        </div>
+                        <input asp-for="Input.LastName" placeholder="eg. Smith" class="form-control" />
+                    </div>
+                    <div class="offset-2">
+                        <span asp-validation-for="Input.LastName" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-row">
+                    <label asp-for="Input.Email" class="col-md-2 control-label pr-3 d-flex flex-row-reverse"></label>
+                    <div class="input-group col-md-10">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text alert-info"><i class="fas fa-envelope alert-info"></i></span>
+                        </div>
+                        <input asp-for="Input.Email" placeholder="eg. john.doe@gmail.com" class="form-control" />
+                    </div>
+                    <div class="offset-2">
+                        <span asp-validation-for="Input.Email" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-row">
+                    <label asp-for="Input.MobilePhone" class="col-md-2 control-label pr-3 d-flex flex-row-reverse"></label>
+                    <div class="input-group col-md-10">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text alert-info"><i class="fas fa-mobile alert-info"></i></span>
+                        </div>
+                        <input asp-for="Input.MobilePhone" placeholder="eg. 888-444-2404" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-control" />
+                    </div>
+                    <div class="offset-2">
+                        <span asp-validation-for="Input.MobilePhone" class="text-danger"></span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <div class="form-row">
+                    <label asp-for="Input.Password" class="col-md-2 control-label pr-3 d-flex flex-row-reverse"></label>
+                    <div class="input-group col-md-10">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text alert-info"><i class="fas fa-lock alert-info"></i></span>
+                        </div>
+                        <input asp-for="Input.Password" placeholder="eg. S3cureXSTE" class="form-control" />
+                    </div>
+                    <div class="offset-2">
+                        <span asp-validation-for="Input.Password" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-row">
+                    <label asp-for="Input.ConfirmPassword" class="col-md-2 control-label pr-3 d-flex flex-row-reverse"></label>
+                    <div class="input-group col-md-10">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text alert-info"><i class="fas fa-key alert-info"></i></span>
+                        </div>
+                        <input asp-for="Input.ConfirmPassword" class="form-control" />
+                    </div>
+                    <div class="offset-2">
+                        <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-row">
+                    <label asp-for="Input.RegistrationCode" class="col-md-2 control-label pr-3 d-flex flex-row-reverse"></label>
+                    <div class="input-group col-md-10">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text alert-info"><i class="fas fa-barcode alert-info"></i></span>
+                        </div>
+                        <input asp-for="Input.RegistrationCode" placeholder="eg. Company Code"  class="form-control" />
+                    </div>
+                    <div class="offset-2">
+                        <span asp-validation-for="Input.RegistrationCode" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group offset-2">
+              <button type="submit" class="btn btn-lg btn-primary">
+                <span class="fas fa-save"></span>&nbsp;&nbsp;Register&nbsp;&nbsp;
+              </button>
+            </div>            
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

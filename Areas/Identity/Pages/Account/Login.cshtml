@@ -1,0 +1,85 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+    ViewBag.PanelTitle = "Log in";
+    ViewBag.PanelIcon = "fas fa-user";
+}
+<br />
+<span class="text-danger">@Html.ValidationSummary(true)</span>
+<div class="row">
+    <div class="col-md-10">
+        <section>
+            <form id="account" method="post">
+                <div class="form-group">
+                    <div class="form-row">
+                        <label asp-for="Input.Email" class="col-md-2 control-label pr-3 d-flex flex-row-reverse"></label>
+                        <div class="input-group col-md-10">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text alert-info">
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <input asp-for="Input.Email" placeholder="john.doe@gmail.com" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="offset-2">
+                        <span asp-validation-for="Input.Email" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-row">
+                        <label asp-for="Input.Password" class="col-md-2 control-label pr-3 d-flex flex-row-reverse"></label>
+                        <div class="input-group col-md-10">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text alert-info">
+                                    <i class="fas fa-lock" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <input asp-for="Input.Password" placeholder="S3cureXSTE" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="offset-2">
+                        <span asp-validation-for="Input.Password" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-row">
+                        <label class="col-md-2 control-label"></label>
+                        <div class="input-group col-md-10">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text alert-info d-flex justify-content-center align-items-center">
+                                  <input asp-for="Input.RememberMe"/>
+                                </span>
+                            </div>
+                            <input type="text" class="form-control" readonly="readonly" value="Remember me?">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="offset-2 d-flex justify-content-between">
+                        <button type="submit" class="btn btn-lg btn-primary">
+                            <span class="fas fa-sign-in-alt"></span>&nbsp;&nbsp;Log in&nbsp;&nbsp;
+                        </button>
+                        <div class="btn-group btn-group-sm" role="group">
+                            <a type="button" class="btn btn-outline-primary" asp-page="./ForgotPassword">
+                                Forgot your password?
+                            </a>
+                            <a type="button" class="btn btn-outline-primary" asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">
+                                Register as a new user
+                            </a>
+                            <a type="button" class="btn btn-outline-primary" asp-page="./ResendEmailConfirmation">
+                                Resend email confirmation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

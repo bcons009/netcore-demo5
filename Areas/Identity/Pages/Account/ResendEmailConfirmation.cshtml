@@ -1,0 +1,36 @@
+﻿@page
+@model ResendEmailConfirmationModel
+@{
+    ViewData["Title"] = "Resend email confirmation";
+    ViewBag.PanelTitle = "Resend email confirmation";
+    ViewBag.PanelIcon = "fas fa-user";
+}
+
+<p class="pt-3 px-3">Enter your email below.</p>
+<hr />
+<div class="mb-4">
+  <div class="col-md-10">
+    <form method="post">
+      <div asp-validation-summary="All" class="text-danger"></div>
+      <div class="form-group">
+        <div class="form-row">
+          <label asp-for="Input.Email" class="col-md-2 control-label pr-3 d-flex flex-row-reverse"></label>
+          <div class="input-group col-md-10">
+            <div class="input-group-prepend">
+              <span class="input-group-text alert-info"><i class="fas fa-envelope alert-info"></i></span>
+            </div>
+            <input asp-for="Input.Email" class="form-control" placeholder="Area Name" />
+          </div>
+          <div>
+            <span asp-validation-for="Input.Email" class="text-danger"></span>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary offset-2">Resend</button>
+    </form>
+  </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

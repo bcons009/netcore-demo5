@@ -1,0 +1,173 @@
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+  /* Vertically center the text there */
+}
+
+header,
+footer {
+    background-color:lightskyblue;
+}
+
+.btn-group-sm {
+    background-color: lightskyblue;
+}
+    .btn-group-sm .btn {
+        line-height: 2.6;
+        color: #212529;
+    }
+
+label {
+  line-height: 2rem;
+  margin-bottom: 0;
+}
+
+.input-group-prepend {
+  width: 50px;
+}
+.input-group-prepend > span {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.edit-btns:not(td) {
+  height: 40px;
+}
+.edit-btns .btn {
+  margin-right: 0.5rem;
+}
+.edit-btns .btn .fas {
+  margin-right: 0.25rem;
+}
+
+.single-checkbox {
+  border-radius: 0.25rem !important;
+}
+
+.before-btns {
+  margin-bottom: 2rem;
+}
+
+thead tr {
+  background-color: deepskyblue;
+  border-color: deepskyblue;
+  color: white;
+}
+thead tr th:last-child {
+  width: 230px;
+}
+
+.tdw-xs {
+    min-width: 60px;
+    max-width: 60px;
+}
+
+.tdw-s {
+    min-width: 100px;
+    max-width: 100px;
+}
+
+.tdw-m {
+    min-width: 130px;
+    max-width: 130px;
+}
+
+.tdw-ml {
+    min-width: 180px;
+    max-width: 180px;
+}
+
+.tdw-l {
+    min-width: 200px;
+    max-width: 200px;
+}
+
+.tdw-xl {
+    min-width: 300px;
+    max-width: 300px;
+}
+
+.btn-secondary {
+  background-color: #5AC1F6;
+  border-color: #5AC1F6;
+}
+.btn-secondary:hover {
+  background-color: #36b3f4;
+  border-color: #36b3f4;
+}
+.btn-secondary:focus, .btn-secondary.focus {
+  box-shadow: 0 0 0 0.2rem #2aaff3;
+}
+
+textarea {
+  resize: none;
+}
